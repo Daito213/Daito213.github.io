@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.8;
+}
+
+.page-header {
+  text-align: center;
+  padding: 190px 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.section {
+  max-width: 800px;
+  margin: 60px;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-left: 4px solid #444;
+  padding-left: 10px;
+}
+
+.text-main {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.leaders,
+.schedule {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.leaders li,
+.schedule li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.05rem;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 60px;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/*ロゴを左上に固定*/
+.logo-fixed {
+    position: fixed;
+    top: -40px;
+    left: 20px;
+    width: 180px;
+    z-index: 1000;
+}
+
+
+
+/* ---- スマホ対応 ---- */
+@media (max-width: 600px) {
+  .section {
+    margin: 40px auto;
+  }
+  .header h1 {
+    font-size: 1.9rem;
+  }
+  .section h2 {
+    font-size: 1.3rem;
+  }
+
+  .gallery-title{
+    padding-top: 270px;
+  }
+
+  .text-main {
+    font-size: 1rem;
+  }
+  
+  
+  .logo-fixed {
+     width: 130px;  
+     top: -40px;
+     left: 10px;
+  }
+
+}

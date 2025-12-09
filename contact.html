@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>お問い合わせ | Pirouette</title>
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <!-- 固定ヘッダー -->
+    <div class="header">
+        <nav class="navbar">
+            <h2 class="logo">
+                <span class="logo-left">Piroue</span><span class="logo-right">tte</span>
+            </h2>
+            <ul class="menu">
+                <li><a href="pirouette_2025_a92bd7f531.html">ホーム</a></li>
+                <!--<li><a href="about.html">部活紹介</a></li>-->
+                <li><a href="media.html">活動の様子</a></li>
+                <li><a href="voice.html">先輩の声</a></li>
+                <li><a href="clubhouse.html">部室に行く</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- ページタイトル -->
+    <header class="page-header">
+        <h1>お問い合わせ</h1>
+        <p class="subtitle">ご質問・新歓に関するご相談はこちらから</p>
+        <div class="divider"></div>
+    </header>
+
+    <section class="contact-container fade-in">
+        <div class="contact-card">
+            <h2>新歓係メール</h2>
+            <p>公式の新歓メールアドレスです。気軽にどうぞ！</p>
+            <a href="mailto:kishi.daito392@mail.kyutech.jp" class="contact-link">
+                ピルエット新歓係メール
+            </a>
+            <p class="anti-spam">※スパム対策のため、メール送信時は必要に応じてご確認ください。</p>
+        </div>
+
+        <div class="contact-card">
+            <h2>X（旧Twitter）</h2>
+            <p>最新情報や活動の様子を更新しています。DMでも相談受付中！</p>
+            <a href="https://x.com/kitpirouette?s=11&t=8eAhSpd67WuStOeye7FYPQ" target="_blank" class="contact-link">
+                @KITpirouette
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h2>Instagram</h2>
+            <p>活動写真やイベントの様子を投稿しています。DMでも相談受付中！</p>
+            <a href="https://www.instagram.com/pirouette_kit?igsh=b2JtcWQzaTdxdmo2&utm_source=qr" target="_blank" class="contact-link">
+                @pirouette_kit
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <h2>公式LINE</h2>
+            <p>新歓情報を受け取れるLINEアカウントです。</p>
+            <a href="https://line.me/R/ti/p/example" target="_blank" class="line-link">
+                友だち追加はこちら
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 Juggling Club Pirouette</footer>
+
+    <!-- スクロールアニメ -->
+    <script>
+        const items = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                }
+            });
+        });
+
+        items.forEach(item => observer.observe(item));
+    </script>
+    <script src="js/header.js"></script>
+
+</body>
+</html>

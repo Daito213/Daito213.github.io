@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.8;
+}
+
+/* --- Page header (共通デザイン) --- */
+.page-header {
+    text-align: center;
+    padding: 130px 20px 50px;
+}
+
+.page-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.divider {
+    width: 360px;
+    height: 2px;
+    background: #666;
+    opacity: 0;
+    transform: scaleX(0);
+    margin: 0 auto 30px;
+    animation: dividerAnim 1.2s ease forwards;
+}
+
+@keyframes dividerAnim {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* --- Contact section --- */
+
+.contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 25px 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+}
+
+.contact-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.contact-link,
+.line-link {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.contact-link:hover,
+.line-link:hover {
+    background: #444;
+}
+
+/* --- Fade-in animation --- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.9s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* --- Smartphone --- */
+@media (max-width: 600px) {
+    .page-header {
+        padding: 0 20px 60px;
+        margin-top: 0%;
+    }
+
+    .page-header h1 {
+        font-size: 1.9rem;
+    }
+
+    .divider {
+        width: 200px;
+    }
+}

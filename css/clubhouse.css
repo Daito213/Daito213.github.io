@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.8;
+}
+
+/* ---- Header ---- */
+
+.page-header {
+    text-align: center;
+    padding: 190px 20px 50px;
+}
+
+.page-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.divider {
+    width: 360px;
+    height: 2px;
+    background: #666;
+    border-radius: 2px;
+    margin: 0 auto 30px;
+    opacity: 0;
+    transform: scaleX(0);
+    animation: dividerAnim 1.2s ease forwards;
+}
+
+@keyframes dividerAnim {
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* ---- Main content ---- */
+
+.layout{
+    display: flex;
+    justify-content: flex-start; /*左寄せ*/
+    position: relative;
+    padding-left: 7%;
+    padding-right: 0;
+    min-height: 100vh; /*画面全体の高さを確保*/
+}
+
+.content-left{
+    flex: 1;
+    max-width: 800px;
+    padding-right: 60px;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0;
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 40px 0 15px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.map-section{
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+
+.clubhouse_map{
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
+}
+
+.clubhouse_map img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.desc {
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.status-button {
+    display: inline-block;
+    background: #222;
+    color: #fff;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.status-button:hover {
+    background: #444;
+}
+
+.map-img{
+    width: 100%;
+    height: auto;
+}
+
+.mascot-side {
+    position: relative;
+    margin-left: -30%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(50%);
+    z-index: -1;          /* ページ内容より後ろに置く（邪魔しない） */
+    pointer-events: none; /* クリックを邪魔しない */
+    overflow: hidden;
+}
+
+.mascot-side img {
+    height: 180vh; /* 画面高さの180% */
+    margin-bottom: -50%;
+    object-fit: cover;
+    opacity: 0.50;        /* 少し淡くして存在感を調整 */
+}
+
+
+/* ---- Fade animations ---- */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.9s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Footer ---- */
+
+.footer {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 600px) {
+    
+    .header{
+        margin-bottom: 0%;
+    }
+
+    .page-header{
+        padding: 0 20px 30px;
+    }
+
+    .page-header h1 {
+        font-size: 1.9rem;   
+    }
+
+    .divider {
+        width: 200px;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .status-button {
+        width: 100%;
+        text-align: center;
+        padding: 16px 0;
+        font-size: 1.05rem;
+    }
+
+    .mascot-side{
+        display: none;
+    }
+}
